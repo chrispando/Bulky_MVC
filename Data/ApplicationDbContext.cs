@@ -1,5 +1,7 @@
 ﻿using BulkyWeb.Models;
+using BulkyWeb.Data;
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace BulkyWeb.Data
 {
@@ -12,14 +14,14 @@ namespace BulkyWeb.Data
 
         public DbSet<Category> Categories { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Category>().HasData(
-                new Category { Id=1, Name = "Action", DisplayOrder=1},
-                new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
-                new Category { Id = 3, Name = "History", DisplayOrder = 3 }
-                );
+        // protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     modelBuilder.Entity<Category>().HasData(
+        //         new Category { Id=1, Name = "Action", DisplayOrder=1},
+        //         new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
+        //         new Category { Id = 3, Name = "History", DisplayOrder = 3 }
+        //         );
 
-        }
+        // }
     }
 }
