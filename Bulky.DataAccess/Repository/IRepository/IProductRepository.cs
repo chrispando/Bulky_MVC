@@ -5,10 +5,9 @@ using Bulky.Models;
 
 namespace Bulky.DataAccess.Repository.IRepository
 {
-    public interface IUnitOfWork
+    public interface IProductRepository : IRepository<Product>
     {
-        ICategoryRepository Category { get; }
-        IProductRepository Product { get; }
-        void Save();
+        void Update(Product obj);
+
     }
 }
