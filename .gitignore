@@ -364,3 +364,6 @@ FodyWeavers.xsd
 
 #data
 appsettings.json
+
+#images
+BulkyWeb/wwwroot/images/*
